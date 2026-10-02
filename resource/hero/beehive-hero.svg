@@ -1,0 +1,88 @@
+<svg viewBox="115 110 230 220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     color="#8a6d12" role="img" aria-labelledby="beehiveTitle">
+  <title id="beehiveTitle">Beehive — animated honeycomb</title>
+
+  <defs>
+    <radialGradient id="nodeGrad" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#fff2b0"/>
+      <stop offset="55%" stop-color="#f7d832"/>
+      <stop offset="100%" stop-color="#e5b122"/>
+    </radialGradient>
+    <radialGradient id="honeyGrad">
+      <stop offset="0%" stop-color="#f7d832" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#e5b122" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <style>
+    :root { color: #8a6d12; }
+    .cells polygon { fill: none; stroke: currentColor; stroke-width: 1.5; opacity: .16; }
+    .cells .honey { fill: url(#honeyGrad); }
+    .edges line { stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 3 11; opacity: .32; animation: 3.4s linear infinite mesh-dash; }
+    .nodes circle { opacity: .9; }
+    .pulse { fill: none; stroke: #f7d832; stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; animation: 2.8s ease-out infinite mesh-pulse; }
+    @keyframes mesh-dash { to { stroke-dashoffset: -28; } }
+    @keyframes mesh-pulse { 0% { opacity: .55; transform: scale(.6); } 70%, 100% { opacity: 0; transform: scale(2.1); } }
+    @media (prefers-color-scheme: dark) {
+      :root { color: #e8c33a; }
+      .cells polygon { opacity: .22; }
+      .edges line { opacity: .4; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .edges line, .pulse { animation: none; }
+    }
+  </style>
+
+  <g class="cells">
+    <polygon class="honey" fill-opacity=".22" points="230.00,184.00 261.18,202.00 261.18,238.00 230.00,256.00 198.82,238.00 198.82,202.00"/>
+    <polygon points="292.35,184.00 323.53,202.00 323.53,238.00 292.35,256.00 261.18,238.00 261.18,202.00"/>
+    <polygon points="167.65,184.00 198.82,202.00 198.82,238.00 167.65,256.00 136.47,238.00 136.47,202.00"/>
+    <polygon class="honey" fill-opacity=".12" points="261.18,130.00 292.35,148.00 292.35,184.00 261.18,202.00 230.00,184.00 230.00,148.00"/>
+    <polygon points="198.82,130.00 230.00,148.00 230.00,184.00 198.82,202.00 167.65,184.00 167.65,148.00"/>
+    <polygon points="261.18,238.00 292.35,256.00 292.35,292.00 261.18,310.00 230.00,292.00 230.00,256.00"/>
+    <polygon class="honey" fill-opacity=".12" points="198.82,238.00 230.00,256.00 230.00,292.00 198.82,310.00 167.65,292.00 167.65,256.00"/>
+  </g>
+
+  <g class="edges">
+    <line x1="230" y1="220" x2="292.35" y2="220" style="animation-delay: 0s"/>
+    <line x1="230" y1="220" x2="261.18" y2="166" style="animation-delay: .3s"/>
+    <line x1="230" y1="220" x2="198.82" y2="166" style="animation-delay: .6s"/>
+    <line x1="230" y1="220" x2="167.65" y2="220" style="animation-delay: .9s"/>
+    <line x1="230" y1="220" x2="198.82" y2="274" style="animation-delay: 1.2s"/>
+    <line x1="230" y1="220" x2="261.18" y2="274" style="animation-delay: 1.5s"/>
+    <line x1="261.18" y1="166" x2="292.35" y2="220" style="animation-delay: .45s"/>
+    <line x1="292.35" y1="220" x2="261.18" y2="274" style="animation-delay: .75s"/>
+    <line x1="261.18" y1="274" x2="198.82" y2="274" style="animation-delay: 1.05s"/>
+    <line x1="198.82" y1="274" x2="167.65" y2="220" style="animation-delay: 1.35s"/>
+    <line x1="167.65" y1="220" x2="198.82" y2="166" style="animation-delay: 1.65s"/>
+    <line x1="198.82" y1="166" x2="261.18" y2="166" style="animation-delay: 1.95s"/>
+  </g>
+
+  <g class="pulses">
+    <circle class="pulse" cx="230" cy="220" r="9" style="animation-delay: 0s"/>
+    <circle class="pulse" cx="261.18" cy="166" r="9" style="animation-delay: .4s"/>
+    <circle class="pulse" cx="292.35" cy="220" r="9" style="animation-delay: .8s"/>
+    <circle class="pulse" cx="261.18" cy="274" r="9" style="animation-delay: 1.2s"/>
+    <circle class="pulse" cx="198.82" cy="274" r="9" style="animation-delay: 1.6s"/>
+    <circle class="pulse" cx="167.65" cy="220" r="9" style="animation-delay: 2s"/>
+    <circle class="pulse" cx="198.82" cy="166" r="9" style="animation-delay: 2.4s"/>
+  </g>
+
+  <g class="nodes">
+    <circle cx="230" cy="220" r="9" fill="url(#nodeGrad)" filter="url(#glow)"/>
+    <circle cx="292.35" cy="220" r="7" fill="url(#nodeGrad)" filter="url(#glow)" opacity=".88"/>
+    <circle cx="167.65" cy="220" r="7" fill="url(#nodeGrad)" filter="url(#glow)" opacity=".88"/>
+    <circle cx="261.18" cy="166" r="7" fill="url(#nodeGrad)" filter="url(#glow)" opacity=".88"/>
+    <circle cx="198.82" cy="166" r="7" fill="url(#nodeGrad)" filter="url(#glow)" opacity=".88"/>
+    <circle cx="261.18" cy="274" r="7" fill="url(#nodeGrad)" filter="url(#glow)" opacity=".88"/>
+    <circle cx="198.82" cy="274" r="7" fill="url(#nodeGrad)" filter="url(#glow)" opacity=".88"/>
+  </g>
+</svg>

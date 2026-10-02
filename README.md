@@ -1,20 +1,22 @@
 <h1 align="center">Beehive</h1>
 
-<p align="center">
+<div align="center">
+  <img src="resource/hero/beehive-hero.svg" width="360" alt="Animated beehive — a honeycomb of glowing cells with data flowing between them" />
+  <br />
   <img src="https://img.shields.io/badge/status-placeholder-lightgrey" alt="Placeholder badge" />
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License badge" />
-</p>
-
-<p align="center">
-  Made by
-  <a href="https://beecode.rs"><strong>Beecode</strong></a>
-</p>
+  <br />
+  <br />
+  Made by <a href="https://beecode.rs"><strong>Beecode</strong></a>
+</div>
 
 The hub of the [Beecode](https://beecode.rs) tool ecosystem: a set of small, sharply
 focused apps built around one workflow — **developing on the move, with the laptop left
-behind**.
+behind**. The pocket apps are the core of that workflow; a couple of the tools live on
+the laptop too — Tmux Companion to keep tmux sessions ready for the phone to take over,
+and Text Lantern, a desktop app through and through.
 
-This repository is a directory, not a codebase. Each tool lives in its own repo;
+> This repository is a directory, not a codebase. Each tool lives in its own repo;
 everything open source is public under the
 [beecode-rs](https://github.com/beecode-rs) organization.
 
@@ -24,10 +26,10 @@ everything open source is public under the
 |---|---|
 | <img src="https://raw.githubusercontent.com/beecode-rs/usage-pulse/main/resource/icon/app-icon.png" width="40" alt="Usage Pulse icon" /> **[Usage Pulse](https://github.com/beecode-rs/usage-pulse)**<br><sub>Desktop (Electron)</sub> | Watches your coding-plan usage limits (the 5-hour window as a ring, the weekly/monthly window as a bar), lists every running Claude Code session — local and over SSH — and schedules tiny prompts timed to open fresh 5-hour windows that together cover a whole workday. |
 | <img src="https://raw.githubusercontent.com/beecode-rs/relay/main/resource/icon/app-icon.png" width="40" alt="Relay icon" /> **[Relay](https://github.com/beecode-rs/relay)**<br><sub>Mobile (Expo, Android & iOS)</sub> | An SSH terminal in your pocket: manage a list of servers, connect, and drive a remote shell — e.g. Claude Code in tmux — from your phone. |
-| <img src="https://raw.githubusercontent.com/beecode-rs/text-lantern/main/resource/icon.png" width="40" alt="Text Lantern icon" /> **[Text Lantern](https://github.com/beecode-rs/text-lantern)**<br><sub>Menu bar (Electron)</sub> | Reads the currently selected text aloud, fully on-device, through Piper neural voices (Serbian and English shipped, any other addable) and Kokoro. |
+| <img src="https://raw.githubusercontent.com/beecode-rs/text-lantern/main/resource/icon.png" width="40" alt="Text Lantern icon" /> **[Text Lantern](https://github.com/beecode-rs/text-lantern)**<br><sub>Menu bar (Electron)</sub> | Reads the currently selected text aloud, fully on-device, through Piper neural voices (Serbian and English shipped, any other addable) and Kokoro. A laptop/desktop app rather than part of the mobile workflow — but a mobile version is planned. |
 | 🚧 **Turnstone**<br><sub>Mobile (Expo, Android)</sub> | Browses and reads files on a remote server over SSH, strictly read-only: file tree, syntax-highlighted code, rendered Markdown and HTML, PDF, remote search, git status and diffs, and live watching of remote changes. |
 | 🚧 **Usage Pulse Mobile**<br><sub>Mobile (Expo)</sub> | A read-only companion for Usage Pulse: the same usage and session dashboard on your phone over the VPN, plus local notifications when a session finishes or a usage warning fires. |
-| 🚧 **Tmux Companion**<br><sub>Desktop (Electron)</sub> | Manages tmux sessions across the local machine and SSH hosts: suffixed per-app sessions, an embedded terminal running your real tmux, and one-click launches into an OS terminal. Shares its session naming with Relay, so phone and desktop continue the same tmux sessions. |
+| 🚧 **Tmux Companion**<br><sub>Desktop (Electron)</sub> | Manages tmux sessions across the local machine and SSH hosts: suffixed per-app sessions, an embedded terminal running your real tmux, and one-click launches into an OS terminal. A desktop app, but a necessary part of the on-the-move workflow: it shares its session naming with Relay, so the sessions you set up here are exactly the ones you continue on the phone. |
 
 ## The idea: development without the laptop
 
@@ -78,7 +80,7 @@ and React components. The skill is open source too, in the
 
 ## More to come
 
-The hive is growing. More small tools for the on-the-move setup are in the works —
-watch this repo or the
+The hive is growing. More small tools are in the works — for the pocket and for the
+desk, a mobile version of Text Lantern among them — watch this repo or the
 [beecode-rs organization](https://github.com/orgs/beecode-rs/repositories?type=source)
 to see them land.

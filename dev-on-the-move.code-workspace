@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../usage-pulse-mobile"
+		},
+		{
+			"path": "../tmux-companion"
+		},
+		{
+			"path": "../relay"
+		},
+		{
+			"path": "../turnstone"
+		},
+		{
+			"path": "../usage-pulse"
+		},
+		{
+			"path": "../text-lantern"
+		}
+	],
+	"settings": {}
+}

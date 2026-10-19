@@ -68,8 +68,8 @@ Even without a template, a strong house style already exists:
 6. **Feature-status checklist** — `[x]` Done / `[ ]` Planned lists.
 7. **Security statement shape** — "secrets stay on the device, stored in the OS secure
    store, sent only to the server they belong to; no analytics or telemetry."
-8. **Development** — Node.js + pnpm, tag-driven releases via `pnpm release:*`, CI
-   quality gates; deeper material delegated to `resource/doc(s)/`.
+8. **Development** — Node.js + pnpm, tag-driven releases via `pnpm release-<type>`,
+   CI quality gates; deeper material delegated to `resource/doc(s)/`.
 9. **License** — `[MIT](LICENSE)` as the closing section, with a root `LICENSE` file
    in every repo (verified present in all six).
 
